@@ -20,7 +20,5 @@ func main() {
 		panic(mimeErr)
 	}
 
-	base64 := base64.StdEncoding.EncodeToString(fileBytes)
-
-	fmt.Print("data:" + mimeType.String() + ";base64," + base64)
+	fmt.Print("data:" + mimeType.String() + ";base64," + base64.StdEncoding.EncodeToString(fileBytes))
 }
